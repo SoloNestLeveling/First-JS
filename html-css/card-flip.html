@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+
+
+        header {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .main {
+
+            position: relative;
+            width: 250px;
+            height: 350px;
+
+
+        }
+
+        .maincard {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            /*자식 요소들이 3d공간에서 어떻게 보일지 설정, preserve-3d로 
+             설정하면 자식요소들이 3d공간에서 입제적으로 보이게 한다.*/
+            transition: all 1s ease;
+
+        }
+
+        .maincard:hover {
+            transform: rotateY(180deg);
+
+        }
+
+        .front {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            /*180 돌았을떄 자신의 뒷면을 보여주지 않는것 대신 뒤에있는 back이 보인다.*/
+            background-color: rgb(50, 210, 36);
+        }
+
+        .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background-color: rgb(213, 153, 15);
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="main">
+            <div class="maincard">
+                <img class="front" src="./trip.png" />
+                <div class="back"> card back</div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="maincard">
+                <img class="front" src="./trip.png" />
+                <div class="back"> card back</div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="maincard">
+                <img class="front" src="./trip.png" />
+                <div class="back"> card back</div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="maincard">
+                <img class="front" src="./trip.png" />
+                <div class="back"> card back</div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="maincard">
+                <img class="front" src="./trip.png" />
+                <div class="back"> card back</div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="maincard">
+                <img class="front" src="./trip.png" />
+                <div class="back"> card back</div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="maincard">
+                <img class="front" src="./trip.png" />
+                <div class="back"> card back</div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="maincard">
+                <img class="front" src="./trip.png" />
+                <div class="back"> card back</div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="maincard">
+                <img class="front" src="./trip.png" />
+                <div class="back"> card back</div>
+            </div>
+        </div>
+
+
+
+    </header>
+
+</body>
+
+</html>

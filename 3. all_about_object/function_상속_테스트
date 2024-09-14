@@ -1,0 +1,110 @@
+
+
+//function으로 만든 객체 싱속학하기
+
+
+function Idol(groupName, members) {
+    this.groupName = groupName;
+    this.members = [members];
+}
+
+Idol.prototype.sayHello = function () {
+    return `안녕하세요 저희는 ${this.groupName}입니다.`;
+}
+
+
+function FemaleIdol(groupName, members) {
+    Idol.call(this, groupName, members);
+
+}
+
+FemaleIdol.prototype = Object.create(Idol.prototype);
+FemaleIdol.prototype.constructor = FemaleIdol;
+
+FemaleIdol.prototype.sayHello = function () {
+    return `안녕하세요 저희는 ${this.groupName}입니다, 저희 맴버는${this.members}가 있습니다.`
+}
+
+const aespa = new FemaleIdol('에스파',
+    ['카리나', '윈터', '지젤', '닝닝',]
+)
+
+console.log(aespa);
+
+console.log(aespa.sayHello());
+
+
+// class로 만든 객체 상속하기
+
+class Idol2 {
+    name;
+    members;
+
+    constructor(name, members) {
+        this.name = name;
+        this.members = members;
+    }
+
+    sayHello() {
+        return `안녕하세요 저희는 ${this.name}입니다. 저희 그룹 맴버는 ${this.members}가 있습니다.`
+    }
+}
+
+
+class FemaleIdol2 extends Idol2 {
+    part;
+
+    constructor(name, members, part) {
+        super(name, members);
+        this.part = part;
+    }
+
+    // override
+
+    sayHello() {
+        return `${super.sayHello()}, 그리고 저희 각각의 파트는 ${this.part}입니다.`
+    }
+
+}
+
+const aespa2 = new FemaleIdol2('에스파', [
+    '카리나', '지젤', '윈터', '닝닝',
+], ['카리나:visual', '지젤:rap', '윈터:vocal', '닝닝:vocal']);
+
+console.log(aespa2);
+console.log(aespa2.sayHello());
+
+
+
+//----------------------------------------------------------------
+
+console.log('------------------테스트----------------');
+
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.sayHello = function () {
+    return `안녕하세요 저는 ${this.name}입니다.`
+}
+
+function Student(name, age) {
+    this.age = age;
+    Person.call(this, name)
+
+}
+
+
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
+
+
+Student.prototype.sayHello = function () {
+    const baseHello = Person.prototype.sayHello.call(this);
+    return `${baseHello}, 저는 올해 ${this.age}입니다.`;
+}
+
+
+
+const student1 = new Student('Alice', 20)
+console.log(student1.sayHello());

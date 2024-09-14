@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="dom.js" defer></script>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .main {
+            display: flex;
+            position: relative;
+            width: 160px;
+            height: 60px;
+            border-radius: 30px;
+            background: #F6F6F6;
+            box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.5), inset -4px -4px 6px rgba(255, 255, 255, 0.25);
+        }
+
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: rgb(13, 113, 48);
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+
+
+        }
+
+        .sun {
+            font-size: 30px;
+            visibility: visible;
+
+        }
+
+        .mun {
+            font-size: 26px;
+            z-index: 2;
+            position: absolute;
+            visibility: hidden;
+        }
+
+
+
+        .circle:focus {
+            left: 100px;
+
+        }
+
+        .circle:active .sun {
+            visibility: hidden;
+
+        }
+
+        .circle:active .mun {
+            visibility: visible;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="circle">
+            <span class="sun">☀️</span>
+            <span class="mun">🌕</span>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

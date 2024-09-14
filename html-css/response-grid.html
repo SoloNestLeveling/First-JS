@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--뷰포트란 실제 사용자에세 보여지는 화면,그리고 content의 크기를 디바이스 width로 1대1 비율로 맞춘 설정이다.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .color1 {
+            background-color: antiquewhite;
+        }
+
+        .color2 {
+            background-color: rgb(134, 188, 101);
+        }
+
+        .color3 {
+            background-color: rgb(52, 28, 145);
+        }
+
+        .color4 {
+            background-color: rgb(183, 69, 122);
+        }
+
+        .color5 {
+            background-color: rgb(88, 176, 193);
+        }
+
+        .color6 {
+            background-color: antiquewhite;
+        }
+
+        .color7 {
+            background-color: rgb(134, 188, 101);
+        }
+
+        .color8 {
+            background-color: rgb(52, 28, 145);
+        }
+
+        .color9 {
+            background-color: rgb(183, 69, 122);
+        }
+
+        .color10 {
+            background-color: rgb(88, 176, 193);
+        }
+
+        .container {
+            display: grid;
+            margin: 3px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(150px, auto);
+            grid-gap: 3px;
+            grid-template-areas:
+                'a a a'
+                'b c c'
+                'b d d'
+                'e f g'
+                'h h h'
+                'i i i'
+            ;
+        }
+
+        .color1 {
+            grid-area: a;
+        }
+
+        .color2 {
+            grid-area: b;
+        }
+
+        .color3 {
+            grid-area: c;
+        }
+
+        .color4 {
+            grid-area: d;
+        }
+
+        .color8 {
+            grid-area: h;
+        }
+
+        .color9 {
+            grid-area: i;
+        }
+
+        @media screen and (max-width:650px) {
+            .container {
+                grid-template-areas:
+                    'a a a'
+                    'b b b'
+                    'c c c'
+                    'd d d'
+                    'e e e'
+                    'f f f'
+                    'g g g'
+                    'h h h'
+                    'i i i'
+                ;
+            }
+
+            .color1 {
+                grid-area: a;
+            }
+
+            .color2 {
+                grid-area: b;
+            }
+
+            .color3 {
+                grid-area: c;
+            }
+
+            .color4 {
+                grid-area: d;
+            }
+
+            .color5 {
+                grid-area: e;
+            }
+
+            .color6 {
+                grid-area: f;
+            }
+
+            .color7 {
+                grid-area: g;
+            }
+
+            .color8 {
+                grid-area: h;
+            }
+
+            .color9 {
+                grid-area: i;
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item color1">Item1</div>
+        <div class="item item2 color2">Item2</div>
+        <div class="item color3">Item3</div>
+        <div class="item color4">Item4</div>
+        <div class="item color5">Item5</div>
+        <div class="item color6">Item6</div>
+        <div class="item color7">Item7</div>
+        <div class="item color8">Item8</div>
+        <div class="item color9">Item9</div>
+    </div>
+</body>
+
+</html>
+
+<!-- display:grid; 적용하면 각각의 요소들은 grid cell이된다.
+ grid-template-columns: 몇개의 column요소사 들어가는지 사이즈가 어떻게 되는지 설정
+ grid-template-rows: 몇개의 rows요소사 들어가는지 사이즈가 어떻게 되는지 설정
+grid-gap: 각각의 grid cell간의 간격을 조절
+
+grid 반응형으로 구현 하기때문에 크기는 픽셀이 아닌 부모요소의 % 또는 fr을 사용한다.
+
+
+ex) grid-template-columns: 1fr 1fr 1fr 3개의 열을 부모 요소의 크기에 맞게  3등분한다.
+     grid-template-columns: 1fr 2fr 1fr 이렇게 하면 중간 열크기가 2배임으로 1:2:1비율을 부모 요소에 맞게 4등분.
+      grid-template-columns: repeat(5, 10%) 부모 크기의 50%공간에 5개씩 만든다. 
+
+      ROW는 column에 맞게 자동으로 설정되도록 지정해둔다.
+      grid-auto-rows: 150px 이런식으로 크기만 고정 시킬수 있다.
+      
+      만약 요소안에 내용이 길어서 넘칠경우 넘친 크기에 맞게 row크기를 조절할수있다.
+      grid-auto-rows: minmax(150px,auto) 최소 150px을 유지하고 내용의 크기에 따라 auto로 조정
+-->

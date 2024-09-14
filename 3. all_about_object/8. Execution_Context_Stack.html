@@ -1,0 +1,45 @@
+자바스크립트를 실행하면 기본적으로 싱글 쓰레드로 실행되고
+싱글쓰레드 안에는 한개의 memory heap 과 한개의 call stack이 있다
+
+
+
+
+
+<script>
+    function One() {
+        console.log('run one');
+        console.log('run one finished');
+    }
+
+    function Two() {
+        console.log('run two');
+        One()
+        console.log('run two finished');
+    }
+
+    function Three() {
+        console.log('run three');
+        Two()
+        console.log('run three finished');
+    }
+
+    Three()
+
+
+
+
+    function getNumber() {
+        const number = 5;
+        function innerGetNumber() {
+            return number;
+        }
+
+        return innerGetNumber();
+    }
+
+    console.log(getNumber());
+
+
+
+
+</script>

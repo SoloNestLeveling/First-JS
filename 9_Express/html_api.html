@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <input id="value" type="text" />
+        <button type="button" onclick="htmlApi()">API 요청</button>
+    </form>
+    <h3 id="result"></h3>
+
+
+
+    <script>
+
+        const htmlApi = async () => {
+            const name = document.querySelector('#value').value;
+            const response = await fetch(`http://localhost:3001/user/${name}`)
+            const json = await response.json();
+            console.log(json)
+
+            document.querySelector("#result").innerHTML = JSON.stringify(json)
+        }
+
+
+
+    </script>
+</body>
+
+
+</html>

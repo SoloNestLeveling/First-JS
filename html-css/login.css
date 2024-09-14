@@ -1,0 +1,258 @@
+body {
+
+    background-image: url('./trip.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.login-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 100px;
+
+
+}
+
+.content h1 {
+    font-size: 100px;
+    font-weight: 400;
+}
+
+.content h2 {
+    margin-top: -50px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.store {
+    display: flex;
+    margin-top: 50px;
+}
+
+.google {
+    display: block;
+    text-decoration: none;
+}
+
+.google-btn {
+    display: flex;
+    width: 150px;
+    height: 40px;
+    padding: 0px 5px;
+    border: 1px solid white;
+    border-radius: 30px;
+    background-color: rgba(233, 233, 233, 0.3);
+    backdrop-filter: blur(1px);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.google-btn img {
+    width: 25px;
+    height: 25px;
+}
+
+.google-btn span {
+    color: white;
+    margin-left: 10px;
+
+}
+
+
+.apple {
+    display: block;
+    text-decoration: none;
+}
+
+.apple-btn {
+    display: flex;
+    width: 150px;
+    height: 40px;
+    padding: 0 5px;
+    border: 1px solid white;
+    border-radius: 30px;
+    background-color: rgba(233, 233, 233, 0.3);
+    backdrop-filter: blur(1px);
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.apple-btn img {
+    width: 34px;
+    height: 34px;
+}
+
+.apple-btn span {
+    color: white;
+    margin-left: 10px;
+}
+
+.apple-btn:hover,
+.google-btn:hover {
+    background-color: rgba(205, 205, 205, 0.7);
+}
+
+.login-bg {
+    display: flex;
+    margin-right: 100px;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(77, 77, 77, 0.4);
+    backdrop-filter: blur(8px);
+    border-radius: 30px;
+    border: 0.7px solid white;
+    padding: 30px;
+    justify-content: center;
+
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+}
+
+.email input {
+    padding: 12px 5px;
+    font-size: 16px;
+    background-color: rgba(172, 172, 172, 0.7);
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+.email input::placeholder {
+    font-size: 14px;
+    color: rgba(220, 220, 220, 0.7);
+}
+
+
+
+
+.password input {
+    padding: 12px 5px;
+    font-size: 16px;
+    background-color: rgba(172, 172, 172, 0.7);
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+.password input::placeholder {
+    font-size: 14px;
+    color: rgba(220, 220, 220, 0.7);
+}
+
+.login-form input {
+    transition: all 0.5s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+    background-color: rgba(87, 87, 87, 0.7);
+}
+
+.password {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.login-set {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.login-keep span {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 200;
+
+}
+
+.login-set a {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 200;
+}
+
+.email span,
+.password span {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+@media screen and (max-width:1053px) {
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        margin: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .store {}
+
+
+
+    .login-bg {
+        margin: 0;
+        margin-top: 40px;
+        box-sizing: border-box;
+    }
+
+
+
+
+}

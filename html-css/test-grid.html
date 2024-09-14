@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 10px;
+            height: 500px;
+            width: 100%;
+
+        }
+
+        .test {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .item1 {
+            background-color: rgb(119, 67, 0);
+        }
+
+        .item2 {
+            background-color: rgb(90, 82, 179);
+        }
+
+        .item3 {
+            background-color: rgb(99, 33, 37);
+        }
+
+        .item4 {
+            background-color: rgb(26, 143, 49);
+        }
+
+        .item5 {
+            background-color: rgb(192, 215, 142);
+        }
+
+        .item6 {
+            background-color: rgb(157, 189, 207);
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="main">
+        <div class="test item1">
+            <div class="inner"></div>
+        </div>
+        <div class="test item2">
+            <div class="inner"></div>
+        </div>
+        <div class="test item3">
+            <div class="inner"></div>
+        </div>
+        <div class="test item4">
+            <div class="inner"></div>
+        </div>
+        <div class="test item5">
+            <div class="inner"></div>
+        </div>
+        <div class="test item6">
+            <div class="inner"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
